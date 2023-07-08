@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAVASCRIPT VALIDATIONS</title>
+    <!-- CSS External Link -->
+    <link rel="stylesheet" href="assets/css/form.css">
+</head>
+<body>
+    <!-- form starts here -->
+    <form action="https://httpbin.org/post" name="cForm" autocomplete="off"  method="post" onsubmit="return validation(event)" >
+        <h2>Contact Form</h2>
+        <div class="row">
+            <label for="name">FullName</label>
+            <input type="text" name="name" id="name">
+            <strong class="error" id="nameErr"></strong>
+        </div>
+
+        <div class="row">
+            <label for="email">Email Id</label>
+            <input type="text" name="email" id="email">
+            <strong class="error" id="emailErr"></strong>
+        </div>
+
+        <div class="row">
+            <label for="mobile">Mobile Number</label>
+            <input type="text" name="mobile" id="mobile" maxlength="10">
+            <strong class="error" id="mobileErr"></strong>
+        </div>
+
+        <div class="row">
+            <label for="city">City</label>
+            <select name="city" id="city">
+                <option value="null">Choose city name</option>
+                <option value="Bangalore">Bangalore</option>
+                <option value="Mysore">Mysore</option>
+                <option value="Hubli">Hubli</option>
+                <option value="Davanagere">Davanagere</option>
+                <option value="Dharwad">Dharwad</option>
+            </select>
+            <strong class="error" id="cityErr"></strong>
+        </div>
+
+        <div class="row">
+            <label for="gender">Gender</label>
+            <div class="form-inline">
+                <label>
+                    <input type="radio" name="gender" id="gender" value="male"> Male
+                </label>
+
+                <label>
+                    <input type="radio" name="gender" id="gender" value="female"> Female
+                </label>
+            </div>
+            <strong class="error" id="genderErr"></strong>
+        </div>
+
+        <div class="row">
+            <label for="lang">Languages (optional) </label>
+            <div class="form-inline">
+                <label>
+                    <input type="checkbox" name="lang" value="kannada"> Kannada
+                </label>
+                <label>
+                    <input type="checkbox" name="lang" value="english"> English
+                </label>
+                <label>
+                    <input type="checkbox" name="lang" value="hindi"> Hindi
+                </label>
+                <label>
+                    <input type="checkbox" name="lang" value="telugu"> Telugu
+                </label>
+                <label>
+                    <input type="checkbox" name="lang" value="tamil"> Tamil
+                </label>
+            </div>
+            <strong class="error" id="langErr"></strong>
+        </div>
+
+        <div class="row">
+            <div class="btn-group">
+                <input type="submit" value="Submit" class="btn-sub">
+                <input type="reset" value="Reset" class="btn-rst">
+            </div>
+        </div>
+    </form>
+    <!-- form ends here -->
+
+
+    <!-- script starts here -->
+    <script src="./assets/js/validation.js"></script>
+</body>
+</html>
